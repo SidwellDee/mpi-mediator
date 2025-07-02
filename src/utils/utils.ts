@@ -232,8 +232,8 @@ export const transformPatientResourceForMPI = (patient: Patient): MpiTransformRe
   const extension = transformedPatient.extension;
   const managingOrganization = transformedPatient.managingOrganization;
 
-  delete transformedPatient.extension;
-  delete transformedPatient.managingOrganization;
+  //delete transformedPatient.extension;
+  //delete transformedPatient.managingOrganization;
 
   return {
     patient: transformedPatient,
