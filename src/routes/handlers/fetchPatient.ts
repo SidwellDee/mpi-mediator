@@ -45,7 +45,7 @@ export const fetchPatientByQuery = async (
 
   const path = `/fhir/Patient?${combinedParams}`;
 
-  orchestrations.push(createClientRegistryOrcherstation('Match by query',path));
+  orchestrations.push(createClientRegistryOrcherstation('Match by query', path));
 
   const mpiResponse = await getData(
     mpiProtocol,
@@ -83,7 +83,7 @@ export const fetchPatientByQuery = async (
           id: combinedParams,
           type: 'searchset',
           total: entries.length,
-          entries: entries,
+          entry: entries,
         },
       },
       orchestrations
