@@ -1,0 +1,20 @@
+services:
+  mpi-mediator:
+    image: hmisecmis/mpi-mediator:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mpi-mediator
+    env_file:
+      - .env.dev
+    # environment:
+    #   - MPI_MEDIATOR_ENV=development
+    #   - FHIR_DATASTORE_HOST=localhost
+    #   - FHIR_DATASTORE_PORT=3447
+    #   - KAFKA_BROKERS=localhost:9092
+    #   - MPI_HOST=localhost
+    #   - MPI_PORT=50001
+    #   - SERVER_PORT=3050
+    volumes:
+      - ./data:/app/data
+    network_mode: host
